@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="organización, red, organizaciones, solidaria, comunitaria, territorio, consejo, cooperativo, Moreno, vecinos, comunidad, problemáticas"/>
+	<meta name="description" content="Red de organizaciones sociales que trabaja desde 2014 por un Cuartel V (partido de Moreno) digno y justo para todos sus habitantes."/>
+	<title>Contacto con el Consejo</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
+</head>	
+<body>
+	<header class="cabecera">			
+		<div class="cabecera__superior container-fluid">
+			<div class="cabecera__contenedor row">
+				<div class="cabecera__logo col-12 col-md-2 text-center text-md-start">
+					<a href="index.html">
+						<img src="imagenes/logo.png" alt="LogoCuartelV" title="LogoCuartelV" width="100%" />
+					</a>
+				</div>
+				<nav class="cabecera__menu col-12 col-md-10">
+					<ul>
+						<li>
+							<a href="index.html">Inicio</a>
+						</li>
+						<li>
+							<a href="quienes_somos.html">Quiénes Somos</a>
+								<ul>
+									<li><a href="quienes_somos.html#sb">Sobre Nosotros</a></li>
+									<li><a href="quienes_somos.html#hs">Historia</a></li>
+									<li><a href="vision.html#ht">Hitos</a></li>
+								</ul>
+						</li>
+						<li>
+							<a href="vision.html">Visión</a>
+						</li>
+						<li>
+							<a href="areas_trabajo.html">Áreas de Trabajo</a>
+						</li>
+						<li>
+							<a href="contacto.html">Contacto</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="cabecera__inferior container-fluid">		
+			<div class="cabecera__contenedor cabecera__contenedor--redes">
+				<a href="https://www.facebook.com/consejocomunidadcv/" target="_blank">
+					<img src="imagenes/logoface.png" title="facebook" width="24" height="24" />
+				</a>
+				<a href="https://www.youtube.com/watch?v=d_CNe4Q3JQs&t" target="_blank">
+					<img src="imagenes/logoyoutube.png" title="youtube" width="24" height="24" />
+				</a>
+			</div>
+		</div>
+	</header>
+	<main class="mainContacto">
+		<div class="mainContacto__rotulo">
+			<h1>Contacto</h1>
+		</div>
+		<section class="mainContacto__form">
+			<h2>Si formás parte de una organización, completá el formulario:</h2>
+			<form action="#" method="post" enctype="application/x-www-form-urlencoded">
+				<fieldset class="mainContacto__campo">
+					<div>
+						<label class="mainContacto__label">
+							Nombre y Apellido:
+							<input class="form-control" type="text" placeholder="Nombre..." />
+						</label>
+					</div>
+					<div>	
+						<label class="mainContacto__label">
+							Organización de la que formás parte:
+							<input class="form-control" type="text" placeholder="Organización..." />
+						</label>
+					</div>
+					<div>	
+						<label class="mainContacto__label">
+							Correo electrónico:
+							<input class="form-control" type="email" placeholder="nombre@ejemplo.com" />
+						</label>
+					</div>
+					<div>
+						<h3>Áreas disciplinares de la organización</h3>
+					</div>
+					<div class="mainContacto__check">	
+						<label>
+							<input class="form-check-input" type="checkbox" name="Adicciones" value="AD" />Adicciones
+						</label>	
+						<label>
+							<input class="form-check-input" type="checkbox" name="Salud" value="SU" />Salud
+						</label>	
+						<label>	
+							<input class="form-check-input" type="checkbox" name="Educacion" value="ED" />Educación
+						</label>
+						<label>
+							<input class="form-check-input" type="checkbox" name="Hábitat" value="HA" />Hábitat
+						</label>	
+						<label>	
+							<input class="form-check-input" type="checkbox" name="Violencia de Género" value="VG" />Violencia de Género
+						</label>
+					</div>
+					<div class="mainContacto__otros">	
+						<label>	
+							<input class="form-check-input" type="checkbox" name="Otros" value="OT" />Otros
+						</label>
+						<label class="mainContacto__area">
+							<textarea class="form-control" rows="7" cols="45" placeholder="Contanos en que área/s se especializa tu organización"></textarea>
+						</label>
+					</div>	
+					<div class="mainContacto__accion">
+						<input class="mainContacto__boton btn btn-secondary" type="submit" value="Enviar Formulario"/>
+						<input class="mainContacto__boton btn btn-secondary" type="reset" value="Resetear Info" />
+					</div>
+				</fieldset>
+			</form>
+		</section>
+		<section class="mainContacto__form">		
+			<h2>Si no formás parte de ninguna organización, ponete en contacto con este formulario:</h2>
+			<form action="#" method="post" enctype="application/x-www-form-urlencoded">
+				<fieldset class="mainContacto__campo">
+					<label class="mainContacto__label">
+						Nombre y Apellido:
+						<input class="form-control" type="text" placeholder="Nombre..." />
+					</label>
+					<label class="mainContacto__label">
+						Correo electrónico:
+						<input class="form-control" type="email" placeholder="nombre@ejemplo.com" />
+					</label>
+					<label>
+						<div>Mensaje:</div>
+						<textarea class="form-control" rows="7" cols="45" placeholder="Contanos en que área te gustaría participar..."></textarea>
+					</label>
+					<div class="mainContacto__accion">
+						<input class="mainContacto__boton btn btn-secondary" type="submit" value="Enviar Formulario"/>
+						<input class="mainContacto__boton btn btn-secondary" type="reset" value="Resetear Info" />								
+					</div>							
+				</fieldset>
+			</form>
+		</section>		
+	</main>	
+	<footer class="pie">
+		<div class="pie__fondo pie__fondo--superior">
+			<div class="pie__superior container-fluid">
+				<div class="pie__contenedor row justify-content-center">
+					<div class="pie__logo col-12 col-sm-12">
+						<a href="index.html">
+							<img src="imagenes/logo.png" title="Logo" width="100%" />
+						</a>
+					</div>
+					<div class="pie__infoContacto col-12 col-sm">
+						<div class="pie__divIconos">
+							<i class="fas fa-envelope-square pie__icono"></i><span>consejodeorgcuartelv@gmail.com</span>
+						</div>	
+						<i class="fas fa-phone-square-alt pie__icono pie__icono--phone"></i><span>011 4726 1030</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pie__fondo pie__fondo--inferior">
+			<div class="pie__inferior container-fluid">	
+				<div class="pie__contenedor pie__contenedor--bajo row">
+					<nav class="pie__menu col-12 col-md-11 col-lg-11">
+						<ul>
+							<li>
+								<a href="index.html">Inicio</a>
+							</li>
+							<li>
+								<a href="quienes_somos.html">Quiénes Somos</a>
+							</li>
+							<li>
+								<a href="vision.html">Visión</a>
+							</li>
+							<li>
+								<a href="areas_trabajo.html">Áreas de Trabajo</a>
+							</li>
+							<li>
+								<a href="contacto.html">Contacto</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="pie__redes col-12 col-md-1 col-lg-1">
+						<a class="pie__ancla pie__ancla--face" href="https://www.facebook.com/consejocomunidadcv/" target="_blank">
+							<img src="imagenes/logoface.png" title="facebook" width="24" height="24" />
+						</a>
+						<a class="pie__ancla pie__ancla--youtube" href="https://www.youtube.com/watch?v=d_CNe4Q3JQs&t" target="_blank">
+							<img src="imagenes/logoyoutube.png" title="youtube" width="24" height="24" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>						
+	</footer>
+	<script src="https://kit.fontawesome.com/4fdb235873.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>	
+</body>
+</html>
