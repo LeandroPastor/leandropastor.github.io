@@ -400,13 +400,13 @@ body {
 .grilla2__linkContacto {
 	grid-area: link;
 	display: flex;
-	width: 430px;
+	width: 423px;
 	height: 48px;
 	justify-content: center;
 	background-color: $color_header_footer;
 	transition: all 0.5s ease-in-out 0.25s;
 	&:hover {
-		width: 800px;
+		width: 520px;
 		justify-content: flex-start;
 	}
 }
