@@ -1,3 +1,12 @@
+$gradiente_header_footer: linear-gradient(to left, #7fb8a4 25%, #699586 50%, #7fb8a4 75%, #9fddca 100%);
+$gradiente_vision: linear-gradient(to left, #7fb8a4, #699586, #dab79c, #76afd7);
+$color_header_footer: #7fb8a4;
+$secciones: Index, Vision, Quienes, Contacto, Areas;
+$rotulos: Vision, Quienes, Contacto, Areas;
+$color_rotulos: #9fddca;
+$tercer_color: #699586;
+
+/* inicio estilos generales */ 
 html,
 body {
 	margin: 0;
@@ -10,36 +19,35 @@ body {
 
 body {
 	font-family: Inter, sans-serif;
+	
+	a {
+		color: white
+	}
+
+	h2 {
+		font-size: 27px;
+		em {
+			font-style: normal;
+		}
+	}
+
+	p {
+		font-size: 18px;
+
+		strong, 
+		em {
+			font-weight: normal;
+			font-style: normal;
+		}
+	}
+
 }
+/* fin estilos generales */
 
-a {
-	color: white;
-}
-
-p strong,
-p em {
-	font-weight: normal;
-	font-style: normal;
-}
-
-h2 em {
-	font-style: normal;
-}
-
-h2 {
-	font-size: 27px;
-}
-
-p {
-	font-size: 18px;
-}
-
-
-/* INICIO HEADER */
-
+/* inicio estilos header */
 .cabecera__superior {
 	width: 100%;
-	background: linear-gradient(to left, #7fb8a4 25%, #699586 50%, #7fb8a4 75%, #9fddca 100%);
+	background: $gradiente_header_footer;
 }
 
 .cabecera__contenedor {
@@ -49,18 +57,18 @@ p {
 	display: flex;
 }
 
-.cabecera__logo img {
-	max-width: 80px;
-	margin: 5px 0 5px 10px;
-	transition: transform 0.5s ease-in-out;
-}
-
-.cabecera__logo img:hover {
-	transform: scale(1.2) translate(10px, 10px);
-}
-
-.cabecera__logo a {
-	display: inline-block;
+.cabecera__logo {
+	img {
+		max-width: 80px;
+		margin: 5px 0 5px 10px;
+		transition: transform 0.5s ease-in-out;
+		&:hover {
+			transform: scale(1.2) translate(10px, 10px);
+		}
+	}
+	a {
+		display: inline-block;
+	}	
 }
 
 .cabecera__menu {
@@ -68,101 +76,72 @@ p {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 10px;
+		transition: transform 0.3s ease-in-out;
+		position: relative;
+		&:hover {
+			text-decoration: underline;
+			transform: scale(1.1);
+			z-index: 1;
+			ul {
+				display: block;
+			}
+		}
+		li {
+			display: block;
+			margin: 0;
+			padding-top: 5px;
+			font-size: 12px;
+		}
+		ul {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			display: none;
+		}
+	}
+	a {
+		text-decoration: none;
+		font-weight: 600;
+		&:hover {
+			text-decoration: underline;
+			color: white;
 
-.cabecera__menu ul {
-	margin: 0;
-	padding: 0;
-}
-
-.cabecera__menu li {
-	display: inline-block;
-	margin-right: 10px;
-	margin-left: 10px;
-	transition: transform 0.3s ease-in-out;
-}
-
-.cabecera__menu li:hover {
-	text-decoration: underline;
-	transform: scale(1.1);
-	z-index: 1;
-}  
-
-.cabecera__menu a {
-	text-decoration: none;
-	font-weight: 600;
-}
-
-.cabecera__menu a:hover {
-	text-decoration: underline;
-	color: white;
-}
-
-.cabecera__menu li li {
-	display: block;
-	margin: 0;
-	padding-top: 5px;
-	font-size: 12px;
-}	
-
-.cabecera__menu li {
-	position: relative;
-}
-
-.cabecera__menu li ul {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	display: none;
-}
-
-.cabecera__menu li:hover ul {
-	display: block;
+		}
+	}
 }
 
 .cabecera__inferior {
 	width: 100%;
-	background-color: #7fb8a4;
+	background-color: $color_header_footer;
 }
 
 .cabecera__contenedor--redes {
 	height: 40px;
 	justify-content: flex-end;
 	align-items: center;
+	a {
+		display: inline-block;
+		margin-right: 10px;
+	}
+	img {
+		transition: transform 0.3s ease;
+		&:hover {transform: scale(1.5) rotate(-30deg);}
+	}
 }
+/* fin estilos header */
 
-.cabecera__contenedor--redes a {
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.cabecera__contenedor--redes img {
-	transition: transform 0.3s ease;
-}
-
-.cabecera__contenedor--redes img:hover {
-	transform: scale(1.5) rotate(-30deg); 
-}
-
-/* para evaluar fijar el menu. Sería una clase para el header pero habria que 
-con un margin top del contenido que siga debajo, empujar para que no lo tape
-.fixed {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-}
-*/
-
-/* FIN HEADER */
-
-
-/* INICIO FOOTER */
-
+/* inicio estilos footer */
 .pie__fondo--superior {
 	width: 100%;
-	background-color: #699586;
+	background-color: $color_header_footer;
 }
 
 .pie__superior {
@@ -188,17 +167,16 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 	justify-content: flex-end;
 	align-items: center;
 	flex-wrap: wrap;
-}
-
-.pie__infoContacto span {
-	margin-right: 10px;
-	margin-left: 5px;
-	color: white;
+	span {
+		margin-right: 10px;
+		margin-left: 5px;
+		color: white;
+	}
 }
 
 .pie__fondo--inferior {
 	width: 100%;
-	background: linear-gradient(to left, #7fb8a4 25%, #699586 50%, #7fb8a4 75%, #9fddca 100%);
+	background: $gradiente_header_footer;
 }
 
 .pie__inferior {
@@ -211,73 +189,61 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-}
-
-.pie__menu ul {
-	margin: 0;
-	padding: 0;
-}
-
-.pie__menu li {
-	display: inline-block;
-	margin-right: 10px;
-	margin-left: 10px;
-	transition: transform 0.3s ease-in-out;
-}
-
-.pie__menu li:hover {
-	text-decoration: underline;
-	transform: scale(1.1);
-	z-index: 1;
-}  
-
-.pie__menu a {
-	text-decoration: none;
-	font-weight: 600;
-}
-
-.pie__menu a:hover {
-	text-decoration: underline;
-	color: white;
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 10px;
+		transition: transform 0.3s ease-in-out;
+		&:hover {
+			text-decoration: underline;
+			transform: scale(1.1);
+			z-index: 1;
+		}
+	}
+	a {
+		text-decoration: none;
+		font-weight: 600;
+		&:hover {
+			text-decoration: underline;
+			color: white;
+		}
+	}
 }
 
 .pie__redes {
 	display: flex;
-}
-
-.pie__redes a {
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.pie__redes img {
-	transition: transform 0.3s ease;
-}
-
-.pie__redes img:hover {
-	transform: scale(1.5) rotate(-30deg); 
+	a {
+		display: inline-block;
+		margin-right: 10px;
+	}
+	img {
+		transition: transform 0.3s ease;
+		&:hover {
+			transform: scale(1.5) rotate(-30deg); 
+		}
+	}
 }
 
 .pie__logo {
 	width: 40px;
 	margin: 5px 0 5px 10px;
-}
-
-.pie__logo img {
-	transition: transform 0.5s ease-in-out
-} 
-
-.pie__logo img:hover {
-	transform: scale(1.5) translate(10px, -10px);
-}
-
-.pie__logo a {
-	display: inline-block;
+	img {
+		transition: transform 0.5s ease-in-out;
+		&:hover {
+			transform: scale(1.5) translate(10px, -10px);
+		}
+	}
+	a {
+		display: inline-block;
+	}
 }
 
 .pie__icono {
 	color: white;
-	margin-right: 
 }
 
 .pie__icono--phone {
@@ -288,25 +254,22 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 	display: flex;
 	align-items: center;
 }
-/* FIN FOOTER */
+/* fin estilos footer */
 
-
-.mainIndex,
-.mainVision,
-.mainQuienes,
-.mainContacto,
-.mainAreas {
-	max-width: 1170px;
-	width: 100%;
-	margin: 20px auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
+/* estilos generales mains secciones */
+@each $seccion in $secciones {
+	.main#{$seccion} {
+		max-width: 1170px;
+		width: 100%;
+		margin: 20px auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
 }
+/* estilos generales mains secciones */
 
-
-/* SECCION INDEX */
-
+/* inicio estilos index */
 .banner {
 	background-image: url(../imagenes/principal.jpg);
 	background-size: cover;
@@ -322,39 +285,41 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 	color: white;
 }	
 
-.mainIndex__seccion a {	
-	display: inline-block;
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-	font-size: 0;
+.mainIndex__seccion {	
+	a {
+		display: inline-block;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		font-size: 0;
+	}
 }	
-
+		
 .mainIndex__texto {
 	max-width: 350px;
 	margin: auto;
 	font-size: 18px;
 	color: black;
+	h2 {
+		display: inline-block;
+	}
 }
+/* fin estilos index */	
 
-.mainIndex__texto h2 {
-	display: inline-block;
+/* bucle para rótulos de todas las secciones, salvo el index */
+@each $rotular in $rotulos {
+	.main#{$rotular}__rotulo {
+		height: 100%;
+		color: white;
+		background-color: $color_rotulos;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
+/* fin bucle para rotulos de todas las secciones, salvo el index */
 
-/* FIN SECCION INDEX */
-
-
-/* SECCION QUIENES SOMOS */
-
-.mainQuienes__rotulo {
-	height: 100%;
-	color: white;
-	background-color: #9fddca;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
+/* inicio sección QuienesSomos */
 .grilla1 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -369,35 +334,32 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 } 
 
 .grilla1__foto {
-	grid-area: fotogrilla
+	grid-area: fotogrilla;
+	img {
+		width: 100%
+	}
 }
  
 .grilla1__titulo {
-	grid-area: titulo_a
+	grid-area: titulo_a;
 }
 
 .grilla1__desarrollo1 {
-	grid-area: desarrollo_a
+	grid-area: desarrollo_a;
+	p {
+		text-align: center;
+		padding: 0 50px;
+		display: inline-block;
+		width: 500px;
+	}
 }
 
 .grilla1__desarrollo2 {
-	grid-area: desarrollo_b
-}
-
-.grilla1__desarrollo1 p {
-	text-align: center;
-	padding: 0 50px;
-	display: inline-block;
-	width: 500px;
-}
-
-.grilla1__desarrollo2 p {
-	text-align: center;
-	padding: 0 20px;
-}
-
-.grilla1__foto img {
-	width: 100%
+	grid-area: desarrollo_b;
+	p {
+		text-align: center;
+		padding: 0 20px;
+	}
 }
 
 .grilla2 {
@@ -416,19 +378,23 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 }
 
 .grilla2__titulo {
-	grid-area: titulo
+	grid-area: titulo;
 }
 
 .grilla2__desarrollo {
-	grid-area: desarrollo
+	grid-area: desarrollo;
+	p {
+		padding: 0 20px;
+		text-align: center;
+	}
 }
 
 .grilla2__fotoIntegrantes {
-	grid-area: integrantes
+	grid-area: integrantes;
 }
 
 .grilla2__video {
-	grid-area: video
+	grid-area: video;
 }
 
 .grilla2__linkContacto {
@@ -437,68 +403,47 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 	width: 430px;
 	height: 48px;
 	justify-content: center;
-	background-color: #7fb8a4;
+	background-color: $color_header_footer;
 	transition: all 0.5s ease-in-out 0.25s;
-}
-
-.grilla2__linkContacto:hover {
-	width: 800px;
-	justify-content: flex-start;
-} 
-
-.grilla2__desarrollo p {
-	padding: 0 20px;
-	text-align: center;
+	&:hover {
+		width: 800px;
+		justify-content: flex-start;
+	}
 }
 
 .grilla2__transformar {
 	color: black;
 	font-weight: 900;
 	font-size: 20px;
-	background-color: #9fddca;
+	background-color: $color_rotulos;
 	text-decoration: none;
 	padding: 10px 40px;
-	border: 2px solid black;
-	
+	border: 2px solid black;	
 	transition: all 0.5s ease-in-out 0.25s;
+	&:hover {
+		color: white;
+		background-color: $tercer_color;
+	}
 }
+/* fin sección QuienesSomos */
 
-.grilla2__transformar:hover {
-	color: white;
-	background-color: #699586;
-}
-
-/* FIN SECCION QUIENES SOMOS */
-
-
-/* SECCION VISION */
-
-.mainVision__rotulo {
-	height: 100%;
-	color: white;
-	background-color: #9fddca;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
+/* inicio sección Visión */
 .mainVision__texto {
 	text-align: center;
 	margin: 25px;
+	p {
+		display: inline-block;
+		max-width: 800px;
+		width: 100%;
+		margin: 10px auto;
+	}
 }
-
-.mainVision__texto p {
-	display: inline-block;
-	max-width: 800px;
-	width: 100%;
-	margin: 10px auto;
-}	
 
 .grillavision {
 	max-width: 1170px;
 	width: 100%;
 	margin: auto;
-	background: linear-gradient(to left, #7fb8a4, #699586, #dab79c, #76afd7);
+	background: $gradiente_vision;
 	margin-bottom: 25px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -519,83 +464,74 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 }
 
 .titulovision {
-	grid-area: titulovision
+	grid-area: titulovision;
 }
 
 .colmenar {
 	grid-area: colmenar;
-}
-
-.colmenar img {
-	transition: transform 0.5s ease-in-out
-}
-
-.colmenar img:hover {
-	transform: scale(1.1) translate(-20px);
+	img {
+		transition: transform 0.5s ease-in-out;
+		&:hover {
+			transform: scale(1.1) translate(-20px);
+		}
+	}
 }
 
 .textocolmenar {
-	grid-area: textocolmenar
+	grid-area: textocolmenar;
+	p {
+		display: inline-block;
+		padding: 0 40px;
+	}
+	h3 {
+		padding: 0 40px;
+	}
 }
 
 .texto84 {
-	grid-area: texto84
+	grid-area: texto84;
+	p {
+		display: inline-block;
+		padding: 0 40px;
+	}
+	h3 {
+		padding: 0 40px;
+	}
 }
 
 .slider {
-	grid-area: slider
+	grid-area: slider;
 }
 
 .texto_asfalto {
-	grid-area: textoasfalto
+	grid-area: textoasfalto;
+	p {
+		display: inline-block;
+		padding: 0 40px;
+	}
+	h3 {
+		padding: 0 40px;
+	}
 }
 
 .escuela84 {
 	grid-area: fotoescuela;
+	img {
+		transition: transform 0.5s ease-in-out;
+		&:hover {
+			transform: scale(1.1) translate(20px);
+		}
+	}
 } 
+/* fin sección Visión */
 
-.escuela84 img {
-	transition: transform 0.5s ease-in-out
-}
-
-.escuela84 img:hover {
-	transform: scale(1.1) translate(20px);
-}
-
-.textocolmenar p,
-.texto84 p,
-.texto_asfalto p {
-	display: inline-block;
-	padding: 0 40px;
-} 
-
-.textocolmenar h3,
-.texto84 h3,
-.texto_asfalto h3 {
-	padding: 0 40px;
-} 
-
-/* FIN SECCION VISION */
-
-
-/* SECCION CONTACTO */
-
-.mainContacto__rotulo {
-	height: 100%;
-	color: white;
-	background-color: #9fddca;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
+/* inicio sección Contacto */
 .mainContacto__form {
 	text-align: center;
 	margin: 25px;
-}
-
-.mainContacto__form h2 {
-	margin-bottom: 25px;
+	h2 {
+		margin-bottom: 25px;
+	}
 }
 
 .mainContacto__campo {
@@ -604,7 +540,7 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: linear-gradient(to left, #7fb8a4, #699586, #dab79c, #76afd7);
+	background: $gradiente_vision;
 	color: white;
 }
 
@@ -618,10 +554,9 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 	display: flex;
 	flex-direction: row;
 	padding-bottom: 10px;
-}
-
-.mainContacto__check label {
-	padding: 0 5px;
+	label {
+		padding: 0 5px;
+	}
 }
 
 .mainContacto__otros {
@@ -642,62 +577,43 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 
 .mainContacto__boton {
 	margin: 5px 0 5px 10px;
-	transition: transform 0.5s ease;	
+	transition: transform 0.5s ease;
+	&:hover {
+		transform: scale(1) translate(8px);
+	}	
 }
-
-.mainContacto__boton:hover {
-	transform: scale(1) translate(8px)
-}
-
 
 .mainContacto__boton {
 	transition: all 0.2s ease-in-out;
+	&:hover {
+		color: white;
+		background-color: $color_header_footer;
+	}
 }
+/* fin sección Contacto */
 
-.mainContacto__boton:hover {
-	color: white;
-	background-color: #7fb8a4;
-}
-
-/* FIN SECCION CONTACTO */
-
-
-/* SECCION AREAS */
-
-.mainAreas__rotulo {
-	height: 100%;
-	color: white;
-	background-color: #9fddca;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
+/* inicio sección Áreas */
 .mainAreas__global {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin: 25px 0;
 	padding: 25px 25px;
-	border: 2px solid #699586;
-}
-
-.mainAreas__global p {
-	text-align: center;
+	border: 2px solid $tercer_color;
+	p {
+		text-align: center;
+	}
 }
 
 .mainAreas__titulo {
 	margin-bottom: 20px;
 }
+/* fin sección Áreas */
 
-/* FIN SECCION AREAS */
-
-
-/* RESPONSIVE */
-
+/* inicio responsive */
 @media (min-width: 320px) {
-	.portada h1 {
-		text-align: right;
+	.portada {
+		h1 {text-align: right;}
 	}
 
 	.cabecera__contenedor {
@@ -708,37 +624,37 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 		width: 80%;
 	}
 
-	.cabecera__menu ul {
-		width: 100%;
-		text-align: center;
-	}
-
-	.cabecera__menu li {
-		margin-right: 5px;
-		margin-left: 5px;
-	}
-
-	.cabecera__menu li li {
-		text-align: left;
+	.cabecera__menu {
+		ul {
+			width: 100%;
+			text-align: center;
+		}
+		li {
+			margin-right: 5px;
+			margin-left: 5px;
+			li {
+				text-align: left;
+			}
+		}
 	}
 
 	.pie__logo {
 		margin: 5px 0;
 		padding: 0;
+		img {
+			width: 30px;
+		}
 	}
 
-	.pie__logo img {
-		width: 30px;
-	}
-
-	.pie__menu li {
-		margin-right: 5px;
-		margin-left: 5px;
-	}
-
-	.pie__menu ul {
-		width: 100%;
-		text-align: center !important;
+	.pie__menu {
+		li {
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+		ul {
+			width: 100%;
+			text-align: center !important;
+		}
 	}
 
 	.pie__redes {
@@ -752,7 +668,6 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto auto auto auto auto auto auto;
-
 	grid-template-areas: "titulovision titulovision titulovision"
 	                     "colmenar colmenar colmenar"
 	                     "textocolmenar textocolmenar textocolmenar"
@@ -773,7 +688,6 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 		max-width: 280px;
 	}
 }
-
 
 @media (min-width: 576px) {
 
@@ -797,32 +711,33 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 		justify-content: flex-end;
 	}
 
-	.cabecera__menu ul {
-		width: 100%;
-		text-align: right;
+	.cabecera__menu {
+		ul {
+			width: 100%;
+			text-align: right;
+		}
+		li {
+			margin-right: 0;
+			margin-left: 20px;
+			li {
+				text-align: left;
+			}
+		}	
 	}
 
-	.cabecera__menu li li {
-		text-align: left;
+	.pie__contenedor {
+		li {
+			margin-right: 10px;
+			margin-left: 0;
+		}
+		ul {
+			width: auto;
+		}
+		nav {
+			padding-left: 0;
+		}
 	}
 
-	.cabecera__menu li {
-		margin-right: 0;
-		margin-left: 20px;
-	}
-
-	.pie__contenedor li {
-		margin-right: 10px;
-		margin-left: 0;
-	}
-
-	.pie__contenedor ul {
-		width: auto;
-	}
-
-	.pie__contenedor nav{
-		padding-left: 0;
-	}
 	.pie__redes {
 		padding-right: 0;
 	}
@@ -835,12 +750,16 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 
 @media (min-width: 992px) {
 
-	.cabecera__logo img {
-		width: 100%;
+	.cabecera__logo {
+		img {
+			width: 100%;
+		}
 	}
 
-	.pie__contenedor ul {
-		text-align: left !important;
+	.pie__contenedor {
+		ul {
+			text-align: left !important;
+		}
 	}
 
 	.pie__redes {
@@ -851,8 +770,10 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 		margin-right: 0 !important;
 	}
 
-	.pie__logo img {
-		width: 40px;
+	.pie__logo {
+		img {
+			width: 40px;
+		}
 	}
 
 	.grillavision {
@@ -878,7 +799,7 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 		overflow-x: auto;
 		max-width: 972px;
 	}
-}	
+}
 
 @media (min-width: 1200px) {
 	.pie__redes {
@@ -891,7 +812,5 @@ con un margin top del contenido que siga debajo, empujar para que no lo tape
 	}
 }
 
-
-/* FIN (POR AHORA) RESPONSIVE */
-
+/* fin responsive */
 
