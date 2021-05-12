@@ -245,7 +245,8 @@ body {
   position: absolute;
   right: 20px;
   bottom: 20px;
-  color: white; }
+  color: white;
+  font-weight: 600; }
 
 .mainIndex__seccion a {
   display: inline-block;
@@ -260,7 +261,13 @@ body {
   font-size: 18px;
   color: black; }
   .mainIndex__texto h2 {
-    display: inline-block; }
+    display: inline-block;
+    font-weight: 600; }
+
+.mainIndex__img img {
+  transition: transform 0.4s ease-in-out; }
+  .mainIndex__img img:hover {
+    transform: scale(1.05); }
 
 /* fin estilos index */
 /* bucle para rótulos de todas las secciones, salvo el index */
@@ -298,6 +305,9 @@ body {
 
 /* fin bucle para rotulos de todas las secciones, salvo el index */
 /* inicio sección QuienesSomos */
+.mainQuienes h2 {
+  font-weight: 600; }
+
 .grilla1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -310,7 +320,10 @@ body {
 .grilla1__foto {
   grid-area: fotogrilla; }
   .grilla1__foto img {
-    width: 100%; }
+    width: 100%;
+    transition: transform 0.4s ease-in-out; }
+    .grilla1__foto img:hover {
+      transform: scale(1.03) translate(5px); }
 
 .grilla1__titulo {
   grid-area: titulo_a; }
@@ -348,8 +361,13 @@ body {
     padding: 0 20px;
     text-align: center; }
 
-.grilla2__fotoIntegrantes {
+.grilla2__foto {
   grid-area: integrantes; }
+  .grilla2__foto img {
+    width: 100%;
+    transition: transform 0.4s ease-in-out; }
+    .grilla2__foto img:hover {
+      transform: scale(1.03) translate(5px); }
 
 .grilla2__video {
   grid-area: video; }
@@ -389,6 +407,8 @@ body {
     max-width: 800px;
     width: 100%;
     margin: 10px auto; }
+  .mainVision__texto h2 {
+    font-weight: 600; }
 
 .grillavision {
   max-width: 1170px;
@@ -412,9 +432,9 @@ body {
 .colmenar {
   grid-area: colmenar; }
   .colmenar img {
-    transition: transform 0.5s ease-in-out; }
+    transition: transform 0.4s ease-in-out; }
     .colmenar img:hover {
-      transform: scale(1.1) translate(-20px); }
+      transform: scale(1.05); }
 
 .textocolmenar {
   grid-area: textocolmenar; }
@@ -446,9 +466,9 @@ body {
 .escuela84 {
   grid-area: fotoescuela; }
   .escuela84 img {
-    transition: transform 0.5s ease-in-out; }
+    transition: transform 0.4s ease-in-out; }
     .escuela84 img:hover {
-      transform: scale(1.1) translate(20px); }
+      transform: scale(1.05); }
 
 /* fin sección Visión */
 /* inicio sección Contacto */
@@ -456,7 +476,8 @@ body {
   text-align: center;
   margin: 25px; }
   .mainContacto__form h2 {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    font-weight: 600; }
 
 .mainContacto__campo {
   width: 800px;
