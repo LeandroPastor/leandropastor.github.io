@@ -309,6 +309,9 @@ body {
   font-weight: 600; }
 
 .grilla1 {
+  max-width: 1170px;
+  width: 100%;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto 55% auto;
@@ -340,9 +343,12 @@ body {
   grid-area: desarrollo_b; }
   .grilla1__desarrollo2 p {
     text-align: center;
-    padding: 0 20px; }
+    padding: 3px 20px 0 20px; }
 
 .grilla2 {
+  max-width: 1170px;
+  width: 100%;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto;
@@ -371,6 +377,8 @@ body {
 
 .grilla2__video {
   grid-area: video; }
+  .grilla2__video iframe {
+    width: 100%; }
 
 .grilla2__linkContacto {
   grid-area: link;
@@ -397,6 +405,135 @@ body {
     color: white;
     background-color: #699586; }
 
+@media (min-width: 320px) {
+  .grilla1 {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "fotogrilla fotogrilla fotogrilla" "titulo_a titulo_a titulo_a" "desarrollo_a desarrollo_a desarrollo_a" "desarrollo_b desarrollo_b desarrollo_b";
+    justify-items: center;
+    align-items: center; }
+
+  .mainQuienes__rotulo h1 {
+    font-size: 24px;
+    text-align: center; }
+
+  .grilla1__titulo h2 {
+    padding-top: 20px;
+    margin: 0; }
+
+  .grilla1__desarrollo1 p {
+    text-align: center;
+    padding: 20px 10px 0 10px;
+    margin: 0;
+    width: 100%; }
+
+  .grilla1__desarrollo2 p {
+    text-align: center;
+    padding: 0 10px 10px 10px;
+    margin: 0;
+    width: 100%; }
+
+  .grilla2 {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "titulo titulo titulo titulo" "desarrollo desarrollo desarrollo desarrollo" "integrantes integrantes integrantes integrantes" "video video video video" "link link link link" !important;
+    justify-items: center;
+    align-items: center; }
+
+  .grilla2__titulo h2 {
+    margin: 0; }
+
+  .grilla2__linkContacto {
+    display: flex;
+    width: 250px;
+    height: auto; }
+    .grilla2__linkContacto:hover {
+      width: 280px;
+      justify-content: flex-start; }
+    .grilla2__linkContacto a {
+      font-size: 15px;
+      text-align: center; }
+
+  .grilla2__transformar {
+    color: black;
+    font-weight: 900;
+    background-color: #9fddca;
+    text-decoration: none;
+    padding: 10px 10px;
+    border: 2px solid black;
+    transition: all 0.5s ease-in-out 0.25s; }
+    .grilla2__transformar:hover {
+      color: white;
+      background-color: #699586; } }
+@media (min-width: 576px) {
+  .grilla2__video iframe {
+    width: 552px;
+    height: 384px; }
+
+  .grilla2__linkContacto {
+    width: 280px; }
+    .grilla2__linkContacto:hover {
+      width: 360px; } }
+@media (min-width: 992px) {
+  .mainQuienes__rotulo h1 {
+    font-size: calc(1.375rem + 1.5vw); }
+
+  .grilla1 {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 55% auto;
+    grid-template-areas: "fotogrilla fotogrilla titulo_a titulo_a titulo_a" "fotogrilla fotogrilla desarrollo_a desarrollo_a desarrollo_a" "desarrollo_b desarrollo_b desarrollo_b desarrollo_b desarrollo_b";
+    justify-items: center;
+    align-items: center;
+    padding: 25px 0; }
+
+  .grilla2 {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "titulo titulo titulo titulo" "desarrollo desarrollo desarrollo desarrollo" "integrantes integrantes video video" "link link link link" !important;
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 20px;
+    padding-bottom: 20px; }
+
+  .grilla2__foto img {
+    max-width: 470px;
+    width: 100%; }
+
+  .grilla2__video {
+    padding-top: 5px; }
+    .grilla2__video iframe {
+      width: 470px;
+      height: 328px; }
+
+  .grilla2__linkContacto {
+    display: flex;
+    width: 380px;
+    height: auto; }
+    .grilla2__linkContacto:hover {
+      width: 460px;
+      justify-content: flex-start; }
+    .grilla2__linkContacto a {
+      font-size: 21px;
+      text-align: center; }
+
+  .grilla1__desarrollo1 p {
+    padding: 20px 50px 0 50px; } }
 /* fin sección QuienesSomos */
 /* inicio sección Visión */
 .mainVision__texto {
