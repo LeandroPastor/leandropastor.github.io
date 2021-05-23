@@ -821,7 +821,8 @@ body {
 }
 
 .mainContacto__campo {
-	width: 800px;
+	max-width: 800px;
+	width: 100%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -831,9 +832,23 @@ body {
 }
 
 .mainContacto__label {
+	max-width: 530px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	padding: 5px 0;
+}
+
+.mainContacto__h3 {
+	h3 {
+		margin: 10px;
+	}
+}
+
+.mainContacto__area {
+	max-width: 530px;
+	width: 100%;
 }
 
 .mainContaco__check {
@@ -845,24 +860,16 @@ body {
 	}
 }
 
-.mainContacto__otros {
-	display: flex;
-	flex-direction: row;
-}
-
-.mainContacto__area {
-	padding-left: 10px;
-}
-
 .mainContacto__accion {
-	width: 410px;
+	max-width: 410px;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 .mainContacto__boton {
-	margin: 5px 0 5px 10px;
+	margin: 5px;
 	transition: transform 0.5s ease;
 	&:hover {
 		transform: scale(1) translate(8px);
@@ -1098,5 +1105,43 @@ body {
 	}
 }
 
+@media (max-width: 767px) {
+
+	.mainContacto__label {
+		max-width: 400px;
+		width: 100%;
+	}
+
+	.mainContacto__area {
+		max-width: 400px;
+		width: 100%;
+	}
+}
+
+@media (max-width: 575px) {
+	.mainContacto__form {
+		margin: 0;
+	}
+
+	.mainContacto__label {
+		max-width: 270px;
+		width: 100%;
+	}
+
+	.mainContacto__form {
+		h2 {
+			margin-top: 25px;
+		}
+	}
+
+	.mainContacto__area {
+		max-width: 270px;
+		width: 100%;
+	}
+
+	.mainContacto__boton {
+		padding: 5px;
+	}
+}
 /* fin responsive */
 

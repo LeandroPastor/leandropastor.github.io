@@ -58,7 +58,7 @@
 			</div>
 		</div>
 	</header>
-	<main class="mainContacto">
+	<main class="mainContacto container-fluid">
 		<div class="mainContacto__rotulo">
 			<h1>Contacto</h1>
 		</div>
@@ -66,25 +66,19 @@
 			<h2>Si formás parte de una organización, completá el formulario:</h2>
 			<form action="#" method="post" enctype="application/x-www-form-urlencoded">
 				<fieldset class="mainContacto__campo">
-					<div>
-						<label class="mainContacto__label">
-							Nombre y Apellido:
-							<input class="form-control" type="text" placeholder="Nombre..." />
-						</label>
-					</div>
-					<div>	
-						<label class="mainContacto__label">
-							Organización de la que formás parte:
-							<input class="form-control" type="text" placeholder="Organización..." />
-						</label>
-					</div>
-					<div>	
-						<label class="mainContacto__label">
-							Correo electrónico:
-							<input class="form-control" type="email" placeholder="nombre@ejemplo.com" />
-						</label>
-					</div>
-					<div>
+					<label class="mainContacto__label">
+						Nombre y Apellido:
+						<input class="form-control" type="text" placeholder="Nombre..." />
+					</label>
+					<label class="mainContacto__label">
+						Organización de la que formás parte:
+						<input class="form-control" type="text" placeholder="Organización..." />
+					</label>
+					<label class="mainContacto__label">
+						Correo electrónico:
+						<input class="form-control" type="email" placeholder="nombre@ejemplo.com" />
+					</label>
+					<div class="mainContacto__h3">
 						<h3>Áreas disciplinares de la organización</h3>
 					</div>
 					<div class="mainContacto__check">	
@@ -103,15 +97,13 @@
 						<label>	
 							<input class="form-check-input" type="checkbox" name="Violencia de Género" value="VG" />Violencia de Género
 						</label>
-					</div>
-					<div class="mainContacto__otros">	
 						<label>	
 							<input class="form-check-input" type="checkbox" name="Otros" value="OT" />Otros
 						</label>
-						<label class="mainContacto__area">
-							<textarea class="form-control" rows="7" cols="45" placeholder="Contanos en que área/s se especializa tu organización"></textarea>
-						</label>
-					</div>	
+					</div>
+					<label class="mainContacto__area">
+						<textarea class="form-control" rows="7" cols="45" placeholder="Contanos en que área/s se especializa tu organización"></textarea>
+					</label>
 					<div class="mainContacto__accion">
 						<input class="mainContacto__boton btn btn-secondary" type="submit" value="Enviar Formulario"/>
 						<input class="mainContacto__boton btn btn-secondary" type="reset" value="Resetear Info" />
@@ -131,8 +123,8 @@
 						Correo electrónico:
 						<input class="form-control" type="email" placeholder="nombre@ejemplo.com" />
 					</label>
-					<label>
-						<div>Mensaje:</div>
+					<label class="mainContacto__area">
+						Mensaje:
 						<textarea class="form-control" rows="7" cols="45" placeholder="Contanos en que área te gustaría participar..."></textarea>
 					</label>
 					<div class="mainContacto__accion">
