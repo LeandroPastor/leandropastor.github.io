@@ -57,7 +57,43 @@ body {
 	display: flex;
 }
 
-.cabecera__logo {
+.cabecera__menu {
+	flex-grow: 1;
+	li {
+		transition: transform 0.3s ease-in-out;
+		&:hover {
+			text-decoration: underline;
+			transform: scale(1.1);
+			z-index: 1;
+			ul {
+				display: block;
+			}
+		}
+		li {
+			margin: 0;
+			font-size: 12px;
+		}
+		ul {
+			background: $gradiente_header_footer;
+		}
+	}
+	a {
+		font-weight: 600;
+		color: white;
+		&:hover {
+			text-decoration: underline;
+			color: $tercer_color;
+		}
+	}
+}
+
+.cabecera__navBot {
+	max-width: 1170px;
+	width: 100%;
+}
+
+.cabecera__navBar {
+	padding-right: 0;
 	img {
 		max-width: 80px;
 		margin: 5px 0 5px 10px;
@@ -71,52 +107,9 @@ body {
 	}	
 }
 
-.cabecera__menu {
-	flex-grow: 1;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-	li {
-		display: inline-block;
-		margin-right: 10px;
-		margin-left: 10px;
-		transition: transform 0.3s ease-in-out;
-		position: relative;
-		&:hover {
-			text-decoration: underline;
-			transform: scale(1.1);
-			z-index: 1;
-			ul {
-				display: block;
-			}
-		}
-		li {
-			display: block;
-			margin: 0;
-			padding-top: 5px;
-			font-size: 12px;
-		}
-		ul {
-			position: absolute;
-			top: 100%;
-			left: 0;
-			display: none;
-		}
-	}
-	a {
-		text-decoration: none;
-		font-weight: 600;
-		&:hover {
-			text-decoration: underline;
-			color: white;
-
-		}
-	}
-}
+.cabecera__anclasSecciones {
+	flex-grow: 0;
+}	
 
 .cabecera__inferior {
 	width: 100%;
@@ -462,251 +455,6 @@ body {
 		background-color: $tercer_color;
 	}
 }
-
-@media (min-width: 320px) {
-	
-	.grilla1 {
-	max-width: 1170px;
-	width: 100%;
-	margin: auto;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto auto auto auto;
-	grid-template-areas: "fotogrilla fotogrilla fotogrilla"
-						 "titulo_a titulo_a titulo_a"
-						 "desarrollo_a desarrollo_a desarrollo_a"
-						 "desarrollo_b desarrollo_b desarrollo_b";
-	justify-items: center;
-	align-items: center;
-	} 
-
-	.mainQuienes__rotulo {
-		h1 {
-			font-size: 24px;
-			text-align: center;
-		}	
-	}
-
-	.grilla1__titulo {
-		h2 {
-			padding-top: 20px;
-			margin: 0;
-		}
-	}
-
-	.grilla1__desarrollo1 {
-		p {
-			text-align: center;
-			padding: 20px 10px 0 10px;
-			margin: 0;
-			width: 100%;
-		}
-	}
-
-	.grilla1__desarrollo2 {
-		p {
-			text-align: center;
-			padding: 0 10px 10px 10px;
-			margin: 0;
-			width: 100%;
-		}
-	}
-
-	.grilla2 {
-	max-width: 1170px;
-	width: 100%;
-	margin: auto;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto auto auto auto auto;
-	grid-template-areas: "titulo titulo titulo titulo"
-						 "desarrollo desarrollo desarrollo desarrollo"
-						 "integrantes integrantes integrantes integrantes"
-						 "video video video video"
-						 "link link link link" !important;
-	justify-items: center;
-	align-items: center;
-	} 
-
-	.grilla2__titulo{
-		h2 {
-			margin: 0;
-		}
-	}
-
-	.grilla2__desarrollo {
-		p {
-			padding: 10px 10px 0;
-		}
-	}
-
-	.grilla2__linkContacto {
-		display: flex;
-		width: 250px;
-		height: auto;
-		&:hover {
-			width: 280px;
-			justify-content: flex-start;
-		}
-		a {
-		font-size: 15px;
-		text-align: center;
-		}
-	}
-
-	.grilla2__transformar {
-		color: black;
-		font-weight: 900;
-		background-color: $color_rotulos;
-		text-decoration: none;
-		padding: 10px 10px;
-		border: 2px solid black;	
-		transition: all 0.5s ease-in-out 0.25s;
-		&:hover {
-			color: white;
-			background-color: $tercer_color;
-		}
-	}
-}
-
-@media (min-width: 576px) {
-
-	.mainQuienes__rotulo {
-		h1 {
-			font-size: calc(1.375rem + 1.5vw);
-		}	
-	}
-
-	.grilla2__video {
-		iframe {
-			width: 552px;
-			height: 384px;}
-		}
-
-	.grilla2__linkContacto {
-		width: 280px;
-		&:hover {
-			width: 360px;
-		}
-	}
-}
-
-@media (min-width: 992px) {
-
-	.grilla1 {
-		max-width: 1170px;
-		width: 100%;
-		margin: auto;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		grid-template-rows: auto 55% auto;
-		
-		grid-template-areas: "fotogrilla fotogrilla titulo_a titulo_a titulo_a"
-		                     "fotogrilla fotogrilla desarrollo_a desarrollo_a desarrollo_a"
-		                     "desarrollo_b desarrollo_b desarrollo_b desarrollo_b desarrollo_b";
-		justify-items: center;
-		align-items: center;
-		padding: 25px 0;                     
-	} 
-
-	.grilla2 {
-		max-width: 1170px;
-		width: 100%;
-		margin: auto;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: auto auto auto auto;
-
-		grid-template-areas: "titulo titulo titulo titulo"
-		                     "desarrollo desarrollo desarrollo desarrollo"
-		                     "integrantes integrantes video video"
-		                     "link link link link"!important;
-		justify-items: center;
-		align-items: center; 
-		grid-row-gap: 20px;
-		padding-bottom: 20px;
-	}
-
-	.grilla2__foto {
-		img {
-			max-width: 470px;
-			width: 100%;
-		}
-	}
-
-	.grilla2__video{
-		padding-top: 5px;
-		iframe {
-			width: 470px;
-			height: 328px;
-		}
-	}
-
-
-	.grilla2__linkContacto {
-		display: flex;
-		width: 378px;
-		height: auto;
-		&:hover {
-			width: 460px;
-			justify-content: flex-start;
-		}
-		a {
-		font-size: 21px;
-		text-align: center;
-		}
-	}
-
-	.grilla1__desarrollo1 {
-		p {
-			padding: 20px 50px 0 50px;
-		}
-	}
-}
-
-@media (min-width: 1200px) {
-
-	.grilla1__titulo {
-		h2 {
-			padding-top: 0;
-			padding-bottom: 20px;
-		}
-	}
-
-	.grilla1__desarrollo1 {
-		p {
-			max-width: 500px;
-			padding: 0 50px;
-			margin-bottom: 16px;
-		}
-	}
-
-	.grilla1__desarrollo2 {
-		p {
-			padding: 5px 20px 0;
-			margin-bottom: 16px;
-		}
-	}
-
-	.grilla2__foto {
-		img {
-			max-width: 560px;
-			width: 100%;
-		}
-	}
-
-	.grilla2__video {
-		iframe {
-			width: 550px;
-			height: 386px;
-		}	
-	}
-}
-
-
-
-
-
 /* fin sección QuienesSomos */
 
 /* inicio sección Visión */
@@ -905,30 +653,9 @@ body {
 
 /* inicio responsive */
 @media (min-width: 320px) {
-	.portada {
-		h1 {text-align: right;}
-	}
-
-	.cabecera__contenedor {
-		justify-content: center;
-	}
-
-	.cabecera__logo img {
-		width: 80%;
-	}
-
-	.cabecera__menu {
-		ul {
-			width: 100%;
-			text-align: center;
-		}
-		li {
-			margin-right: 5px;
-			margin-left: 5px;
-			li {
-				text-align: left;
-			}
-		}
+	
+	.banner__titulo {
+		text-align: right;
 	}
 
 	.pie__logo {
@@ -980,6 +707,109 @@ body {
 		overflow-x: scroll;
 		max-width: 280px;
 	}
+
+	.grilla1 {
+	max-width: 1170px;
+	width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "fotogrilla fotogrilla fotogrilla"
+						 "titulo_a titulo_a titulo_a"
+						 "desarrollo_a desarrollo_a desarrollo_a"
+						 "desarrollo_b desarrollo_b desarrollo_b";
+	justify-items: center;
+	align-items: center;
+	} 
+
+	.mainQuienes__rotulo {
+		h1 {
+			font-size: 24px;
+			text-align: center;
+		}	
+	}
+
+	.grilla1__titulo {
+		h2 {
+			padding-top: 20px;
+			margin: 0;
+		}
+	}
+
+	.grilla1__desarrollo1 {
+		p {
+			text-align: center;
+			padding: 20px 10px 0 10px;
+			margin: 0;
+			width: 100%;
+		}
+	}
+
+	.grilla1__desarrollo2 {
+		p {
+			text-align: center;
+			padding: 0 10px 10px 10px;
+			margin: 0;
+			width: 100%;
+		}
+	}
+
+	.grilla2 {
+	max-width: 1170px;
+	width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-areas: "titulo titulo titulo titulo"
+						 "desarrollo desarrollo desarrollo desarrollo"
+						 "integrantes integrantes integrantes integrantes"
+						 "video video video video"
+						 "link link link link" !important;
+	justify-items: center;
+	align-items: center;
+	} 
+
+	.grilla2__titulo{
+		h2 {
+			margin: 0;
+		}
+	}
+
+	.grilla2__desarrollo {
+		p {
+			padding: 10px 10px 0;
+		}
+	}
+
+	.grilla2__linkContacto {
+		display: flex;
+		width: 250px;
+		height: auto;
+		&:hover {
+			width: 280px;
+			justify-content: flex-start;
+		}
+		a {
+		font-size: 15px;
+		text-align: center;
+		}
+	}
+
+	.grilla2__transformar {
+		color: black;
+		font-weight: 900;
+		background-color: $color_rotulos;
+		text-decoration: none;
+		padding: 10px 10px;
+		border: 2px solid black;	
+		transition: all 0.5s ease-in-out 0.25s;
+		&:hover {
+			color: white;
+			background-color: $tercer_color;
+		}
+	}
 }
 
 @media (min-width: 576px) {
@@ -996,27 +826,28 @@ body {
 		overflow-x: auto;
 		max-width: 556px;
 	}
+
+	.mainQuienes__rotulo {
+		h1 {
+			font-size: calc(1.375rem + 1.5vw);
+		}	
+	}
+
+	.grilla2__video {
+		iframe {
+			width: 552px;
+			height: 384px;}
+		}
+
+	.grilla2__linkContacto {
+		width: 280px;
+		&:hover {
+			width: 360px;
+		}
+	}
 }	
 
 @media (min-width: 768px) {
-
-	.cabecera__contenedor {
-		justify-content: flex-end;
-	}
-
-	.cabecera__menu {
-		ul {
-			width: 100%;
-			text-align: right;
-		}
-		li {
-			margin-right: 0;
-			margin-left: 20px;
-			li {
-				text-align: left;
-			}
-		}	
-	}
 
 	.pie__contenedor {
 		li {
@@ -1042,12 +873,6 @@ body {
 }
 
 @media (min-width: 992px) {
-
-	.cabecera__logo {
-		img {
-			width: 100%;
-		}
-	}
 
 	.pie__contenedor {
 		ul {
@@ -1092,9 +917,80 @@ body {
 		overflow-x: auto;
 		max-width: 972px;
 	}
+
+	.grilla1 {
+		max-width: 1170px;
+		width: 100%;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto 55% auto;
+		
+		grid-template-areas: "fotogrilla fotogrilla titulo_a titulo_a titulo_a"
+		                     "fotogrilla fotogrilla desarrollo_a desarrollo_a desarrollo_a"
+		                     "desarrollo_b desarrollo_b desarrollo_b desarrollo_b desarrollo_b";
+		justify-items: center;
+		align-items: center;
+		padding: 25px 0;                     
+	} 
+
+	.grilla2 {
+		max-width: 1170px;
+		width: 100%;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto auto auto auto;
+
+		grid-template-areas: "titulo titulo titulo titulo"
+		                     "desarrollo desarrollo desarrollo desarrollo"
+		                     "integrantes integrantes video video"
+		                     "link link link link"!important;
+		justify-items: center;
+		align-items: center; 
+		grid-row-gap: 20px;
+		padding-bottom: 20px;
+	}
+
+	.grilla2__foto {
+		img {
+			max-width: 470px;
+			width: 100%;
+		}
+	}
+
+	.grilla2__video{
+		padding-top: 5px;
+		iframe {
+			width: 470px;
+			height: 328px;
+		}
+	}
+
+
+	.grilla2__linkContacto {
+		display: flex;
+		width: 378px;
+		height: auto;
+		&:hover {
+			width: 460px;
+			justify-content: flex-start;
+		}
+		a {
+		font-size: 21px;
+		text-align: center;
+		}
+	}
+
+	.grilla1__desarrollo1 {
+		p {
+			padding: 20px 50px 0 50px;
+		}
+	}
 }
 
 @media (min-width: 1200px) {
+	
 	.pie__redes {
 		justify-content: flex-end;
 	}
@@ -1102,6 +998,42 @@ body {
 	.mainAreas__tabla {
 		overflow-x: auto;
 		max-width: 1190px;
+	}
+
+	.grilla1__titulo {
+		h2 {
+			padding-top: 0;
+			padding-bottom: 20px;
+		}
+	}
+
+	.grilla1__desarrollo1 {
+		p {
+			max-width: 500px;
+			padding: 0 50px;
+			margin-bottom: 16px;
+		}
+	}
+
+	.grilla1__desarrollo2 {
+		p {
+			padding: 5px 20px 0;
+			margin-bottom: 16px;
+		}
+	}
+
+	.grilla2__foto {
+		img {
+			max-width: 560px;
+			width: 100%;
+		}
+	}
+
+	.grilla2__video {
+		iframe {
+			width: 550px;
+			height: 386px;
+		}	
 	}
 }
 
@@ -1119,6 +1051,7 @@ body {
 }
 
 @media (max-width: 575px) {
+	
 	.mainContacto__form {
 		margin: 0;
 	}

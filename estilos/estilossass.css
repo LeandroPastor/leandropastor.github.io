@@ -35,29 +35,10 @@ body {
   margin: auto;
   display: flex; }
 
-.cabecera__logo img {
-  max-width: 80px;
-  margin: 5px 0 5px 10px;
-  transition: transform 0.5s ease-in-out; }
-  .cabecera__logo img:hover {
-    transform: scale(1.2) translate(10px, 10px); }
-.cabecera__logo a {
-  display: inline-block; }
-
 .cabecera__menu {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
-  .cabecera__menu ul {
-    margin: 0;
-    padding: 0; }
+  flex-grow: 1; }
   .cabecera__menu li {
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
-    transition: transform 0.3s ease-in-out;
-    position: relative; }
+    transition: transform 0.3s ease-in-out; }
     .cabecera__menu li:hover {
       text-decoration: underline;
       transform: scale(1.1);
@@ -65,21 +46,34 @@ body {
       .cabecera__menu li:hover ul {
         display: block; }
     .cabecera__menu li li {
-      display: block;
       margin: 0;
-      padding-top: 5px;
       font-size: 12px; }
     .cabecera__menu li ul {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      display: none; }
+      background: linear-gradient(to left, #7fb8a4 25%, #699586 50%, #7fb8a4 75%, #9fddca 100%); }
   .cabecera__menu a {
-    text-decoration: none;
-    font-weight: 600; }
+    font-weight: 600;
+    color: white; }
     .cabecera__menu a:hover {
       text-decoration: underline;
-      color: white; }
+      color: #699586; }
+
+.cabecera__navBot {
+  max-width: 1170px;
+  width: 100%; }
+
+.cabecera__navBar {
+  padding-right: 0; }
+  .cabecera__navBar img {
+    max-width: 80px;
+    margin: 5px 0 5px 10px;
+    transition: transform 0.5s ease-in-out; }
+    .cabecera__navBar img:hover {
+      transform: scale(1.2) translate(10px, 10px); }
+  .cabecera__navBar a {
+    display: inline-block; }
+
+.cabecera__anclasSecciones {
+  flex-grow: 0; }
 
 .cabecera__inferior {
   width: 100%;
@@ -405,159 +399,6 @@ body {
     color: white;
     background-color: #699586; }
 
-@media (min-width: 320px) {
-  .grilla1 {
-    max-width: 1170px;
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "fotogrilla fotogrilla fotogrilla" "titulo_a titulo_a titulo_a" "desarrollo_a desarrollo_a desarrollo_a" "desarrollo_b desarrollo_b desarrollo_b";
-    justify-items: center;
-    align-items: center; }
-
-  .mainQuienes__rotulo h1 {
-    font-size: 24px;
-    text-align: center; }
-
-  .grilla1__titulo h2 {
-    padding-top: 20px;
-    margin: 0; }
-
-  .grilla1__desarrollo1 p {
-    text-align: center;
-    padding: 20px 10px 0 10px;
-    margin: 0;
-    width: 100%; }
-
-  .grilla1__desarrollo2 p {
-    text-align: center;
-    padding: 0 10px 10px 10px;
-    margin: 0;
-    width: 100%; }
-
-  .grilla2 {
-    max-width: 1170px;
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "titulo titulo titulo titulo" "desarrollo desarrollo desarrollo desarrollo" "integrantes integrantes integrantes integrantes" "video video video video" "link link link link" !important;
-    justify-items: center;
-    align-items: center; }
-
-  .grilla2__titulo h2 {
-    margin: 0; }
-
-  .grilla2__desarrollo p {
-    padding: 10px 10px 0; }
-
-  .grilla2__linkContacto {
-    display: flex;
-    width: 250px;
-    height: auto; }
-    .grilla2__linkContacto:hover {
-      width: 280px;
-      justify-content: flex-start; }
-    .grilla2__linkContacto a {
-      font-size: 15px;
-      text-align: center; }
-
-  .grilla2__transformar {
-    color: black;
-    font-weight: 900;
-    background-color: #9fddca;
-    text-decoration: none;
-    padding: 10px 10px;
-    border: 2px solid black;
-    transition: all 0.5s ease-in-out 0.25s; }
-    .grilla2__transformar:hover {
-      color: white;
-      background-color: #699586; } }
-@media (min-width: 576px) {
-  .mainQuienes__rotulo h1 {
-    font-size: calc(1.375rem + 1.5vw); }
-
-  .grilla2__video iframe {
-    width: 552px;
-    height: 384px; }
-
-  .grilla2__linkContacto {
-    width: 280px; }
-    .grilla2__linkContacto:hover {
-      width: 360px; } }
-@media (min-width: 992px) {
-  .grilla1 {
-    max-width: 1170px;
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 55% auto;
-    grid-template-areas: "fotogrilla fotogrilla titulo_a titulo_a titulo_a" "fotogrilla fotogrilla desarrollo_a desarrollo_a desarrollo_a" "desarrollo_b desarrollo_b desarrollo_b desarrollo_b desarrollo_b";
-    justify-items: center;
-    align-items: center;
-    padding: 25px 0; }
-
-  .grilla2 {
-    max-width: 1170px;
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "titulo titulo titulo titulo" "desarrollo desarrollo desarrollo desarrollo" "integrantes integrantes video video" "link link link link" !important;
-    justify-items: center;
-    align-items: center;
-    grid-row-gap: 20px;
-    padding-bottom: 20px; }
-
-  .grilla2__foto img {
-    max-width: 470px;
-    width: 100%; }
-
-  .grilla2__video {
-    padding-top: 5px; }
-    .grilla2__video iframe {
-      width: 470px;
-      height: 328px; }
-
-  .grilla2__linkContacto {
-    display: flex;
-    width: 378px;
-    height: auto; }
-    .grilla2__linkContacto:hover {
-      width: 460px;
-      justify-content: flex-start; }
-    .grilla2__linkContacto a {
-      font-size: 21px;
-      text-align: center; }
-
-  .grilla1__desarrollo1 p {
-    padding: 20px 50px 0 50px; } }
-@media (min-width: 1200px) {
-  .grilla1__titulo h2 {
-    padding-top: 0;
-    padding-bottom: 20px; }
-
-  .grilla1__desarrollo1 p {
-    max-width: 500px;
-    padding: 0 50px;
-    margin-bottom: 16px; }
-
-  .grilla1__desarrollo2 p {
-    padding: 5px 20px 0;
-    margin-bottom: 16px; }
-
-  .grilla2__foto img {
-    max-width: 560px;
-    width: 100%; }
-
-  .grilla2__video iframe {
-    width: 550px;
-    height: 386px; } }
 /* fin sección QuienesSomos */
 /* inicio sección Visión */
 .mainVision__texto {
@@ -709,23 +550,8 @@ body {
 /* fin sección Áreas */
 /* inicio responsive */
 @media (min-width: 320px) {
-  .portada h1 {
+  .banner__titulo {
     text-align: right; }
-
-  .cabecera__contenedor {
-    justify-content: center; }
-
-  .cabecera__logo img {
-    width: 80%; }
-
-  .cabecera__menu ul {
-    width: 100%;
-    text-align: center; }
-  .cabecera__menu li {
-    margin-right: 5px;
-    margin-left: 5px; }
-    .cabecera__menu li li {
-      text-align: left; }
 
   .pie__logo {
     margin: 5px 0;
@@ -759,7 +585,78 @@ body {
 
   .mainAreas__tabla {
     overflow-x: scroll;
-    max-width: 280px; } }
+    max-width: 280px; }
+
+  .grilla1 {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "fotogrilla fotogrilla fotogrilla" "titulo_a titulo_a titulo_a" "desarrollo_a desarrollo_a desarrollo_a" "desarrollo_b desarrollo_b desarrollo_b";
+    justify-items: center;
+    align-items: center; }
+
+  .mainQuienes__rotulo h1 {
+    font-size: 24px;
+    text-align: center; }
+
+  .grilla1__titulo h2 {
+    padding-top: 20px;
+    margin: 0; }
+
+  .grilla1__desarrollo1 p {
+    text-align: center;
+    padding: 20px 10px 0 10px;
+    margin: 0;
+    width: 100%; }
+
+  .grilla1__desarrollo2 p {
+    text-align: center;
+    padding: 0 10px 10px 10px;
+    margin: 0;
+    width: 100%; }
+
+  .grilla2 {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "titulo titulo titulo titulo" "desarrollo desarrollo desarrollo desarrollo" "integrantes integrantes integrantes integrantes" "video video video video" "link link link link" !important;
+    justify-items: center;
+    align-items: center; }
+
+  .grilla2__titulo h2 {
+    margin: 0; }
+
+  .grilla2__desarrollo p {
+    padding: 10px 10px 0; }
+
+  .grilla2__linkContacto {
+    display: flex;
+    width: 250px;
+    height: auto; }
+    .grilla2__linkContacto:hover {
+      width: 280px;
+      justify-content: flex-start; }
+    .grilla2__linkContacto a {
+      font-size: 15px;
+      text-align: center; }
+
+  .grilla2__transformar {
+    color: black;
+    font-weight: 900;
+    background-color: #9fddca;
+    text-decoration: none;
+    padding: 10px 10px;
+    border: 2px solid black;
+    transition: all 0.5s ease-in-out 0.25s; }
+    .grilla2__transformar:hover {
+      color: white;
+      background-color: #699586; } }
 @media (min-width: 576px) {
   .pie__infoContacto {
     padding-right: 0; }
@@ -769,20 +666,20 @@ body {
 
   .mainAreas__tabla {
     overflow-x: auto;
-    max-width: 556px; } }
+    max-width: 556px; }
+
+  .mainQuienes__rotulo h1 {
+    font-size: calc(1.375rem + 1.5vw); }
+
+  .grilla2__video iframe {
+    width: 552px;
+    height: 384px; }
+
+  .grilla2__linkContacto {
+    width: 280px; }
+    .grilla2__linkContacto:hover {
+      width: 360px; } }
 @media (min-width: 768px) {
-  .cabecera__contenedor {
-    justify-content: flex-end; }
-
-  .cabecera__menu ul {
-    width: 100%;
-    text-align: right; }
-  .cabecera__menu li {
-    margin-right: 0;
-    margin-left: 20px; }
-    .cabecera__menu li li {
-      text-align: left; }
-
   .pie__contenedor li {
     margin-right: 10px;
     margin-left: 0; }
@@ -798,9 +695,6 @@ body {
     overflow-x: auto;
     max-width: 748px; } }
 @media (min-width: 992px) {
-  .cabecera__logo img {
-    width: 100%; }
-
   .pie__contenedor ul {
     text-align: left !important; }
 
@@ -829,14 +723,84 @@ body {
 
   .mainAreas__tabla {
     overflow-x: auto;
-    max-width: 972px; } }
+    max-width: 972px; }
+
+  .grilla1 {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 55% auto;
+    grid-template-areas: "fotogrilla fotogrilla titulo_a titulo_a titulo_a" "fotogrilla fotogrilla desarrollo_a desarrollo_a desarrollo_a" "desarrollo_b desarrollo_b desarrollo_b desarrollo_b desarrollo_b";
+    justify-items: center;
+    align-items: center;
+    padding: 25px 0; }
+
+  .grilla2 {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "titulo titulo titulo titulo" "desarrollo desarrollo desarrollo desarrollo" "integrantes integrantes video video" "link link link link" !important;
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 20px;
+    padding-bottom: 20px; }
+
+  .grilla2__foto img {
+    max-width: 470px;
+    width: 100%; }
+
+  .grilla2__video {
+    padding-top: 5px; }
+    .grilla2__video iframe {
+      width: 470px;
+      height: 328px; }
+
+  .grilla2__linkContacto {
+    display: flex;
+    width: 378px;
+    height: auto; }
+    .grilla2__linkContacto:hover {
+      width: 460px;
+      justify-content: flex-start; }
+    .grilla2__linkContacto a {
+      font-size: 21px;
+      text-align: center; }
+
+  .grilla1__desarrollo1 p {
+    padding: 20px 50px 0 50px; } }
 @media (min-width: 1200px) {
   .pie__redes {
     justify-content: flex-end; }
 
   .mainAreas__tabla {
     overflow-x: auto;
-    max-width: 1190px; } }
+    max-width: 1190px; }
+
+  .grilla1__titulo h2 {
+    padding-top: 0;
+    padding-bottom: 20px; }
+
+  .grilla1__desarrollo1 p {
+    max-width: 500px;
+    padding: 0 50px;
+    margin-bottom: 16px; }
+
+  .grilla1__desarrollo2 p {
+    padding: 5px 20px 0;
+    margin-bottom: 16px; }
+
+  .grilla2__foto img {
+    max-width: 560px;
+    width: 100%; }
+
+  .grilla2__video iframe {
+    width: 550px;
+    height: 386px; } }
 @media (max-width: 767px) {
   .mainContacto__label {
     max-width: 400px;
