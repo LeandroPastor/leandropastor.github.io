@@ -412,7 +412,7 @@ body {
   .mainVision__texto h2 {
     font-weight: 600; }
 
-.grillavision {
+.grillaVision {
   max-width: 1170px;
   width: 100%;
   margin: auto;
@@ -428,48 +428,48 @@ body {
   grid-row-gap: 50px;
   color: white; }
 
-.titulovision {
+.grillaVision__titulo {
   grid-area: titulovision; }
 
-.colmenar {
+.grillaVision__colmenar {
   grid-area: colmenar; }
-  .colmenar img {
+  .grillaVision__colmenar img {
     transition: transform 0.4s ease-in-out; }
-    .colmenar img:hover {
+    .grillaVision__colmenar img:hover {
       transform: scale(1.05); }
 
-.textocolmenar {
+.grillaVision__textoColmenar {
   grid-area: textocolmenar; }
-  .textocolmenar p {
+  .grillaVision__textoColmenar p {
     display: inline-block;
     padding: 0 40px; }
-  .textocolmenar h3 {
+  .grillaVision__textoColmenar h3 {
     padding: 0 40px; }
 
-.texto84 {
+.grillaVision__texto84 {
   grid-area: texto84; }
-  .texto84 p {
+  .grillaVision__texto84 p {
     display: inline-block;
     padding: 0 40px; }
-  .texto84 h3 {
+  .grillaVision__texto84 h3 {
     padding: 0 40px; }
 
-.slider {
+.grillaVision__slider {
   grid-area: slider; }
 
-.texto_asfalto {
+.grillaVision__textoAsfalto {
   grid-area: textoasfalto; }
-  .texto_asfalto p {
+  .grillaVision__textoAsfalto p {
     display: inline-block;
     padding: 0 40px; }
-  .texto_asfalto h3 {
+  .grillaVision__textoAsfalto h3 {
     padding: 0 40px; }
 
-.escuela84 {
+.grillaVision__escuela84 {
   grid-area: fotoescuela; }
-  .escuela84 img {
+  .grillaVision__escuela84 img {
     transition: transform 0.4s ease-in-out; }
-    .escuela84 img:hover {
+    .grillaVision__escuela84 img:hover {
       transform: scale(1.05); }
 
 /* fin sección Visión */
@@ -569,7 +569,7 @@ body {
   .pie__redes {
     justify-content: center; }
 
-  .grillavision {
+  .grillaVision {
     max-width: 1170px;
     width: 100%;
     margin: auto;
@@ -707,7 +707,7 @@ body {
   .pie__logo img {
     width: 40px; }
 
-  .grillavision {
+  .grillaVision {
     max-width: 1170px;
     width: 100%;
     margin: auto;
