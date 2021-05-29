@@ -472,7 +472,7 @@ body {
 	}
 }
 
-.grillavision {
+.grillaVision {
 	max-width: 1170px;
 	width: 100%;
 	margin: auto;
@@ -496,11 +496,11 @@ body {
 	color: white;
 }
 
-.titulovision {
+.grillaVision__titulo {
 	grid-area: titulovision;
 }
 
-.colmenar {
+.grillaVision__colmenar {
 	grid-area: colmenar;
 	img {
 		transition: transform 0.4s ease-in-out;
@@ -510,7 +510,7 @@ body {
 	}
 }
 
-.textocolmenar {
+.grillaVision__textoColmenar {
 	grid-area: textocolmenar;
 	p {
 		display: inline-block;
@@ -521,7 +521,7 @@ body {
 	}
 }
 
-.texto84 {
+.grillaVision__texto84 {
 	grid-area: texto84;
 	p {
 		display: inline-block;
@@ -532,11 +532,11 @@ body {
 	}
 }
 
-.slider {
+.grillaVision__slider {
 	grid-area: slider;
 }
 
-.texto_asfalto {
+.grillaVision__textoAsfalto {
 	grid-area: textoasfalto;
 	p {
 		display: inline-block;
@@ -547,7 +547,7 @@ body {
 	}
 }
 
-.escuela84 {
+.grillaVision__escuela84 {
 	grid-area: fotoescuela;
 	img {
 		transition: transform 0.4s ease-in-out;
@@ -681,7 +681,7 @@ body {
 		justify-content: center;
 	}
 
-	.grillavision {
+	.grillaVision {
 	max-width: 1170px;
 	width: 100%;
 	margin: auto;
@@ -894,7 +894,7 @@ body {
 		}
 	}
 
-	.grillavision {
+	.grillaVision {
 	max-width: 1170px;
 	width: 100%;
 	margin: auto;
