@@ -870,6 +870,12 @@ body {
 		overflow-x: auto;
 		max-width: 748px;
 	}
+
+	.grilla2__video {
+		iframe {
+			width: 560px;
+			}
+		}
 }
 
 @media (min-width: 992px) {

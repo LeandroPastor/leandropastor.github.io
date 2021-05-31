@@ -693,7 +693,10 @@ body {
 
   .mainAreas__tabla {
     overflow-x: auto;
-    max-width: 748px; } }
+    max-width: 748px; }
+
+  .grilla2__video iframe {
+    width: 560px; } }
 @media (min-width: 992px) {
   .pie__contenedor ul {
     text-align: left !important; }
