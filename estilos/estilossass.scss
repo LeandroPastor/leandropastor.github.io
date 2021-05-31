@@ -6,7 +6,7 @@ $rotulos: Vision, Quienes, Contacto, Areas;
 $color_rotulos: #9fddca;
 $tercer_color: #699586;
 
-/* inicio estilos generales */ 
+
 html,
 body {
 	margin: 0;
@@ -42,9 +42,7 @@ body {
 	}
 
 }
-/* fin estilos generales */
 
-/* inicio estilos header */
 .cabecera__superior {
 	width: 100%;
 	background: $gradiente_header_footer;
@@ -129,9 +127,7 @@ body {
 		&:hover {transform: scale(1.5) rotate(-30deg);}
 	}
 }
-/* fin estilos header */
 
-/* inicio estilos footer */
 .pie__fondo--superior {
 	width: 100%;
 	background-color: $color_header_footer;
@@ -247,9 +243,7 @@ body {
 	display: flex;
 	align-items: center;
 }
-/* fin estilos footer */
 
-/* estilos generales mains secciones */
 @each $seccion in $secciones {
 	.main#{$seccion} {
 		max-width: 1170px;
@@ -260,9 +254,7 @@ body {
 		justify-content: space-evenly;
 	}
 }
-/* estilos generales mains secciones */
 
-/* inicio estilos index */
 .banner {
 	background-image: url(../imagenes/principal.jpg);
 	background-size: cover;
@@ -308,9 +300,7 @@ body {
 		}
 	}
 }
-/* fin estilos index */	
 
-/* bucle para rótulos de todas las secciones, salvo el index */
 @each $rotular in $rotulos {
 	.main#{$rotular}__rotulo {
 		height: 100%;
@@ -321,9 +311,7 @@ body {
 		justify-content: center;
 	}
 }
-/* fin bucle para rotulos de todas las secciones, salvo el index */
 
-/* inicio sección QuienesSomos */
 .mainQuienes {
 	h2 {
 		font-weight: 600;
@@ -455,9 +443,7 @@ body {
 		background-color: $tercer_color;
 	}
 }
-/* fin sección QuienesSomos */
 
-/* inicio sección Visión */
 .mainVision__texto {
 	text-align: center;
 	margin: 25px;
@@ -556,9 +542,7 @@ body {
 		}
 	}
 } 
-/* fin sección Visión */
 
-/* inicio sección Contacto */
 .mainContacto__form {
 	text-align: center;
 	margin: 25px;
@@ -631,9 +615,7 @@ body {
 		background-color: $color_header_footer;
 	}
 }
-/* fin sección Contacto */
 
-/* inicio sección Áreas */
 .mainAreas__global {
 	display: flex;
 	flex-direction: column;
@@ -649,9 +631,7 @@ body {
 .mainAreas__titulo {
 	margin-bottom: 20px;
 }
-/* fin sección Áreas */
 
-/* inicio responsive */
 @media (min-width: 320px) {
 	
 	.banner__titulo {
@@ -1082,5 +1062,5 @@ body {
 		padding: 5px;
 	}
 }
-/* fin responsive */
+
 
