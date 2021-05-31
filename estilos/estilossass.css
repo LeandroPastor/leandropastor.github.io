@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/* inicio estilos generales */
 html,
 body {
   margin: 0;
@@ -23,8 +21,6 @@ body {
       font-weight: normal;
       font-style: normal; }
 
-/* fin estilos generales */
-/* inicio estilos header */
 .cabecera__superior {
   width: 100%;
   background: linear-gradient(to left, #7fb8a4 25%, #699586 50%, #7fb8a4 75%, #9fddca 100%); }
@@ -91,8 +87,6 @@ body {
     .cabecera__contenedor--redes img:hover {
       transform: scale(1.5) rotate(-30deg); }
 
-/* fin estilos header */
-/* inicio estilos footer */
 .pie__fondo--superior {
   width: 100%;
   background-color: #7fb8a4; }
@@ -184,8 +178,6 @@ body {
   display: flex;
   align-items: center; }
 
-/* fin estilos footer */
-/* estilos generales mains secciones */
 .mainIndex {
   max-width: 1170px;
   width: 100%;
@@ -226,8 +218,6 @@ body {
   flex-direction: column;
   justify-content: space-evenly; }
 
-/* estilos generales mains secciones */
-/* inicio estilos index */
 .banner {
   background-image: url(../imagenes/principal.jpg);
   background-size: cover;
@@ -263,8 +253,6 @@ body {
   .mainIndex__img img:hover {
     transform: scale(1.05); }
 
-/* fin estilos index */
-/* bucle para rótulos de todas las secciones, salvo el index */
 .mainVision__rotulo {
   height: 100%;
   color: white;
@@ -297,8 +285,6 @@ body {
   align-items: center;
   justify-content: center; }
 
-/* fin bucle para rotulos de todas las secciones, salvo el index */
-/* inicio sección QuienesSomos */
 .mainQuienes h2 {
   font-weight: 600; }
 
@@ -399,8 +385,6 @@ body {
     color: white;
     background-color: #699586; }
 
-/* fin sección QuienesSomos */
-/* inicio sección Visión */
 .mainVision__texto {
   text-align: center;
   margin: 25px; }
@@ -472,8 +456,6 @@ body {
     .grillaVision__escuela84 img:hover {
       transform: scale(1.05); }
 
-/* fin sección Visión */
-/* inicio sección Contacto */
 .mainContacto__form {
   text-align: center;
   margin: 25px; }
@@ -532,8 +514,6 @@ body {
     color: white;
     background-color: #7fb8a4; }
 
-/* fin sección Contacto */
-/* inicio sección Áreas */
 .mainAreas__global {
   display: flex;
   flex-direction: column;
@@ -547,8 +527,6 @@ body {
 .mainAreas__titulo {
   margin-bottom: 20px; }
 
-/* fin sección Áreas */
-/* inicio responsive */
 @media (min-width: 320px) {
   .banner__titulo {
     text-align: right; }
@@ -829,6 +807,5 @@ body {
 
   .mainContacto__boton {
     padding: 5px; } }
-/* fin responsive */
 
 /*# sourceMappingURL=estilossass.css.map */
